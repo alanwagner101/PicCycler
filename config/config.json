@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "vegetable",
-    "database": "exampledb",
+    "password": "Signmeon1?",
+    "database": "PicCycler",
     "host": "localhost",
     "dialect": "mysql"
   },
