@@ -12,13 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
     "passport-auth0": "^1.1.0",
     "passport-identityserver3": "^0.6.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.3",
     "sequelize": "^4.41.2"
   },
   "devDependencies": {
