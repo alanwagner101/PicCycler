@@ -1,3 +1,10 @@
 .list-group-item {
   line-height: 2.5;
-}
+};
+
+#chat-area {
+  height: 400px;
+  width: 100%;
+  overflow: auto;
+};
+
