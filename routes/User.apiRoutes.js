@@ -8,8 +8,8 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/user/:username", function(req, res) {
-    db.User.findOne({ where : { username : req.params.username } }).then(function(UserDB) {
+  app.get("/api/user/:id", function(req, res) {
+    db.User.findOne({ where : { id : req.params.id } }).then(function(UserDB) {
       res.json(UserDB);
     });
   });
