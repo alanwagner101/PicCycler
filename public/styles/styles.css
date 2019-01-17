@@ -1,7 +1,9 @@
 .list-group-item {
   line-height: 2.5;
 }
-
+body{
+  background-color: black;
+}
 #chat-area {
   height: 200px;
   width: 100%;
@@ -23,5 +25,8 @@ h4{
 }
 #add-chat{
   color: blue;
+
+}
+.jumbotron{
 
 }
