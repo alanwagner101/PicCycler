@@ -3,6 +3,7 @@ var addPic = $("#add-pic");
 var addUser = $("#add-username");
 var addChat = $("#add-chat");
 var chatBox = $("#chat-area");
+var picBox = $("#picBox");
 var StaticID;
 var StaticName;
 
@@ -191,17 +192,37 @@ function Start() {
         } 
       }
     });
-    // var picNumber;
-    var Digits = JSON.stringify(Math.floor(Date.now()));
-    var currentPic = (((Digits[6] + Digits[7] + Digits[8])%60)/2);
-    console.log(Math.round(currentPic));
     PicAPI.getPics({}).then(function (response) {
-      picNumber = response.length;
-      // for (var k = 0; k < response.length; k++) {
-        
-      // }
+      console.log(response);
+      console.log(response.length);
+      var picNumber = (response.length + 1) * 2;
+      var Digits = JSON.stringify(Math.round(Date.now()));
+      console.log(Digits);
+      var currentPic = ((Digits[6] + Digits[7] + Digits[8])%picNumber)/2;
+      console.log(Math.floor(currentPic));
+      for (var k = 0; k < response.length; k++) {
+        if(currentPic === 0) {
+          picBox.empty();
+          var beginningSlide = $("<div>");
+          beginningSlide.html("<h1>Thank You for coming to PicCycler</h1>");
+          picBox.append(beginningSlide);
+        } else if (response[k].id === currentPic) {
+          picBox.empty();
+          var picWords = $("<div style='text-align: center;'>");
+          picWords.html("<h2>" + response[k].title + "</h2>");
+          picBox.append(picWords);
+          var picUser = $("<div style='text-align: center;'>");
+          picUser.html("<p>" + userArr[response[k].UserId] + "</p>");
+          picBox.append(picUser);
+          var picLink = $("<div style=' text-align: center; width: 400px; height: 400px;'>");
+          picLink.html("<img style='width: 100%;' src='" + response[k].link + "'>");
+          picBox.append(picLink);
+        } else {
+          // return false;
+        }
+      }
     });
-  }, 1000);
+  }, 1500);
 }
 
 Start();
