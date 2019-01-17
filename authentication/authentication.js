@@ -5,6 +5,7 @@ var session = require("express-session");
 var passport = require("passport");
 var Auth0Strategy = require("passport-auth0");
 
+
 var strategy = new Auth0Strategy (
   {
     domain: "piccycler.auth0.com",

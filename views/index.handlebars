@@ -1,40 +1,19 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>Hello</h1>
-        <br><br>
-        <form id="form">
-          <button class="btn btn-md btn-danger" id="add-username">Submit</button>
-          <br><br>
-          <input id="username" rows="2" cols="30" placeholder="Enter username here....."></input>
-        </form>
-        <br><br>
-        <form id="form">
-          <button class="btn btn-md btn-danger" id="add-pic">Submit</button>
-          <br><br>
-          <input id="picLink" rows="2" cols="30" placeholder="Enter Link here....."></input>
-          <input id="picTitle" rows="2" cols="30" placeholder="Enter Title here....."></input>
-        </form>
-        <br><br>
-        <div class="card" id="chatBox">
-          <div class="card-header">
-            <h4>Chat</h4>
-          </div>
-          <div class="card-body">
-            <div id="chat-area">
+<link(rel= "stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")></link>
+<link rel="stylesheet" href="./style.css" type='text/css'>
 
-            </div>
-            <br>
-            <input type="text" id="chat" placeholder="enter message here..." style = "width: 100%;">
-            <br><br>
-            <button class="btn btn-default btn-sm btn-block" id="add-chat">Send</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+{{#if loggedIn}}
+      <a href="/logout"><button class="btn btn-md btn-danger" id="login">Log Out</button></a>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Log Out</a>
+      {{else}}
+      <a href="/logout"><button class="btn btn-md btn-danger" id="login">Log Out</button></a>
+
+      <a href="/login"><button class="btn btn-md btn-danger" id="login">Login</button></a>
+      {{/if}}
+
+
 </div>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
