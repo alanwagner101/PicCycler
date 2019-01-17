@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "wyatt123",
+    "password": "Wyatt123",
     "database": "PicCycler",
     "host": "localhost",
     "dialect": "mysql"
