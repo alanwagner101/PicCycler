@@ -3,8 +3,16 @@
 };
 
 #chat-area {
-  height: 400px;
+  height: 1000px;
   width: 100%;
   overflow: auto;
+  background-color: blueviolet;
 };
 
+h1{
+  font-style: italic;
+  color:red;
+}
+.chatbox{
+  border-style: dashed;
+}
