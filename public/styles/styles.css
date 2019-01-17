@@ -1,5 +1,4 @@
 
-
 .list-group-item {
   line-height: 2.5;
  }
@@ -18,3 +17,37 @@
  .chatbox{
   border-style: dashed;
  }
+
+.list-group-item {
+  line-height: 2.5;
+}
+body{
+  background-color: black;
+}
+#chat-area {
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+  background-color: blueviolet;
+}
+
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:red important;
+  text-align: center
+}
+h4{
+  color: blue;
+  
+}
+.chatbox{
+  border-style: dashed;
+}
+#add-chat{
+  color: blue;
+
+}
+.jumbotron{
+
+}
+
