@@ -12,18 +12,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+app.engine("handlebars",exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/Pics-apiRoutes")(app);
 require("./routes/Chat-apiRoutes")(app);
 require("./routes/User.apiRoutes")(app);
+require("./routes/Authentication-apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -46,3 +42,4 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+
