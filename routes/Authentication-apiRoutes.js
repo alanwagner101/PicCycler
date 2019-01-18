@@ -32,7 +32,7 @@ module.exports = function(app) {
     session({
       secret:"pic cylcer",
       resave: true,
-      saveUnitialize: true
+      saveUninitialized: true
     })
   );
   
