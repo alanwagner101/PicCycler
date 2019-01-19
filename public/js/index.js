@@ -225,8 +225,8 @@ function Start() {
           var picUser = $("<div style='text-align: center;'>");
           picUser.html("<p>" + userArr[response[k].UserId] + "</p>");
           picBox.append(picUser);
-          var picLink = $("<div style=' text-align: center; width: 400px; height: 400px;'>");
-          picLink.html("<img style='width: 100%;' src='" + response[k].link + "'>");
+          var picLink = $("<div id='boximg' style=' text-align: center; max-height: 508px;'>");
+          picLink.html("<img src='" + response[k].link + "'>");
           picBox.append(picLink);
         } else {
           // return false;

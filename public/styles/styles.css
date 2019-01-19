@@ -1,53 +1,137 @@
 
-.list-group-item {
-  line-height: 2.5;
- }
- 
- #chat-area {
-  height: 1000px;
-  width: 100%;
-  overflow: auto;
-  background-color: blueviolet;
- }
- 
- h1{
-  font-style: italic;
-  color:red !important;
- }
- .chatbox{
-  border-style: dashed;
- }
-
-.list-group-item {
-  line-height: 2.5;
-}
-body{
-  background-color: black;
-}
-#chat-area {
-  height: 200px;
-  width: 100%;
-  overflow: auto;
-  background-color: blueviolet;
-}
-
+/* wyatt's css code */
+ /* login page  */
 h1{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:red important;
-  text-align: center
+  text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+  color: red;
+  font-size: 4em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin-top: 150px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
-h4{
-  color: blue;
-  
+
+.animate{
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
-.chatbox{
-  border-style: dashed;
+
+.quote {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: cursive;
 }
+
+.btn{
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px!important;
+  margin-left: 662px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#btnOne {
+  margin-left: 655px!important;
+}
+
+#wrapper {
+  margin-top: 25px;
+}
+
+body {
+  background-image: url("../styles/5cf2660af5f4214def7166dc7a7c8062.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+footer{
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  margin-top: 100px;
+  border-top: 2px solid red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0px;
+
+}
+/* footr*/.login{ 
+  background-color: rgb(46, 45, 45);
+  height: 60px;
+  width: 100%;
+  margin-top: 100px;
+  border-top: 2px solid red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0px;
+}
+
+/* Home page  */
+
+.userh1 {
+  margin-top: 15px!important;
+}
+
+#add-pic.btn{
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+#chat {
+  margin-bottom: 0px;
+}
+
 #add-chat{
-  color: blue;
-
-}
-.jumbotron{
-
+  margin-left: 0px;
+  border: solid 1px darkblue;
+  margin-top: 0px;
 }
 
+.container {
+  width: 100%;
+}
+#chatBox{
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#chat-area{
+  overflow: auto;
+  height: 380px;
+}
+
+#boximg img {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 378px;
+  overflow: hidden;
+  width: auto;
+}
+
+#picBox {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#picBoxCard {
+  margin-top: 10px;
+  height: 510px;
+}

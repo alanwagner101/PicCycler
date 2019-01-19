@@ -1,5 +1,5 @@
 <link(rel= "stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")></link>
-<link rel="stylesheet" href="./style.css" type='text/css'>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Pic Cycler</a>
@@ -25,21 +25,14 @@
   </div>
 </nav>
 
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="picBox">
-          
-        </div>
-        <br><br>
-        <form id="form">
-          <button class="btn btn-md btn-danger" id="add-pic">Submit</button>
-          <br><br>
-          <input id="picLink" rows="2" cols="30" placeholder="Enter Link here....."></input>
-          <input id="picTitle" rows="2" cols="30" placeholder="Enter Title here....."></input>
-        </form>
-        <br><br>
+<div class="container">
+  <dic class="row">
+    <div class="col-md-12">
+      <h1 class="userh1">P i c   C y c l e r !</h1>
+    </div>
+  </dic>
+  <div class="row">
+    <div class="col-md-4">
         <div class="card" id="chatBox">
           <div class="card-header">
             <h4>Chat</h4>
@@ -53,13 +46,26 @@
             <button class="btn btn-default btn-sm btn-block" id="add-chat">Send</button>
           </div>
         </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card" id="picBoxCard">
+        <div class="card-body">
+          <div id="picBox">
+          </div>
+        </div>
       </div>
+      <br>
+      <form id="form">
+          <button class="btn btn-md btn-danger" id="add-pic">Submit</button>
+          <input id="picLink" rows="2" cols="30" placeholder="Enter Link here....."></input>
+          <input id="picTitle" rows="2" cols="30" placeholder="Enter Title here....."></input>
+        </form>
     </div>
   </div>
 </div>
 
-<div class="footer">
-
-</div>
+<footer>
+  Copyright &copy;
+</footer>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
