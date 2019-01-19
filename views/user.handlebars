@@ -10,8 +10,8 @@
     <ul class="navbar-nav">
       {{#if loggedIn}}
       <li class="nav-item active">
-        <a class="nav-link">
-        {{user.nickname}}<span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="nickname">
+        {{user.nickname}}<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/logout">Log Out</a>
