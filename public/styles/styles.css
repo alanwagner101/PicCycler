@@ -1,53 +1,87 @@
 
-.list-group-item {
-  line-height: 2.5;
- }
- 
- #chat-area {
-  height: 1000px;
-  width: 100%;
-  overflow: auto;
-  background-color: blueviolet;
- }
- 
- h1{
-  font-style: italic;
-  color:red !important;
- }
- .chatbox{
-  border-style: dashed;
- }
-
-.list-group-item {
-  line-height: 2.5;
-}
-body{
-  background-color: black;
-}
-#chat-area {
-  height: 200px;
-  width: 100%;
-  overflow: auto;
-  background-color: blueviolet;
-}
-
+/* wyatt's css code */
+ /* login page  */
 h1{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:red important;
-  text-align: center
+  text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+  color: red;
+  font-size: 4em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin-top: 150px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
-h4{
-  color: blue;
-  
+
+.animate{
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
-.chatbox{
-  border-style: dashed;
+
+.quote {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: cursive;
 }
+
+.btn{
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 662px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#btnOne {
+  margin-left: 652px!important;
+}
+
+#wrapper {
+  margin-top: 25px;
+}
+
+body {
+  background-image: url("../styles/5cf2660af5f4214def7166dc7a7c8062.jpg");
+  background-repeat: no-repeat;
+}
+
+footer{
+  background-color: black;
+  height: 60px;
+  weight: 1440px;
+  margin-top: 350px;
+  border-top: 2px solid red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Home page  */
+
+.userh1 {
+  margin-top: 15px!important;
+}
+
+#add-pic.btn{
+  margin-left: 0px;
+}
+
+#chat {
+  margin-bottom: 0px;
+}
+
 #add-chat{
-  color: blue;
-
+  margin-left: 0px;
+  border: solid 1px darkblue;
+  margin-top: 0px;
 }
-.jumbotron{
-
-}
-
