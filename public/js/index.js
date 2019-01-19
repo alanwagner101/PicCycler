@@ -1,11 +1,13 @@
 // The API object contains methods for each kind of request we'll make
 var addPic = $("#add-pic");
-var addUser = $("#add-username");
 var addChat = $("#add-chat");
 var chatBox = $("#chat-area");
 var picBox = $("#picBox");
 var StaticID;
 var StaticName;
+
+var nickname = $("#nickname").text().trim();
+console.log(nickname);
 
 var userArr = [];
 
@@ -110,30 +112,39 @@ addPic.on("click", function (event) {
 
 });
 
-addUser.on("click", function (event) {
-  event.preventDefault();
-  userArr = [];
-  userArr.push("0 slot");
+function addNickname() {
+  var isUser = false;
 
-  var username = $("#username").val().trim();
-  StaticName = username;
+  for(var l = 0; l < userArr.length; l++) {
+    if (nickname === userArr[l]) {
+      isUser = true;
+      StaticID = l;
+      StaticName = userArr[l];
+    }
+  }
 
-  UserAPI.saveUser({
-    username: username,
-  }).then(function (data) {
-    return UserAPI.getUser(data.id);
-  }).then(function (data) {
-    StaticID = data.id;
-    UserAPI.getUsers({}).then(function (response) {
-      console.log(response);
-      for (var j = 0; j < response.length; j++) {
-        userArr.push(response[j].username);
-      }
-      console.log(userArr);
+  if (isUser === true) {
+    return false;
+  } else {
+    UserAPI.saveUser({
+      username: nickname,
+    }).then(function (data) {
+      return UserAPI.getUser(data.id);
+    }).then(function (data) {
+      StaticID = data.id;
+      UserAPI.getUsers({}).then(function (response) {
+        console.log(response);
+        for (var j = 0; j < response.length; j++) {
+          userArr.push(response[j].username);
+        }
+        console.log(userArr);
+      });
     });
-  });
+  }
 
-});
+
+}
+
 
 addChat.on("click", function (event) {
   event.preventDefault();
@@ -191,10 +202,9 @@ function Start() {
           chatBox.prepend(chatWords);
         } 
       }
+      addNickname();
     });
     PicAPI.getPics({}).then(function (response) {
-      console.log(response);
-      console.log(response.length);
       var picNumber = (response.length + 1) * 2;
       var Digits = JSON.stringify(Math.round(Date.now()));
       console.log(Digits);

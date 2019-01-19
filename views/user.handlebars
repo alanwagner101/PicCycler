@@ -10,8 +10,8 @@
     <ul class="navbar-nav">
       {{#if loggedIn}}
       <li class="nav-item active">
-        <a class="nav-link">
-        {{user.nickname}}<span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="nickname">
+        {{user.nickname}}<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/logout">Log Out</a>
@@ -32,12 +32,6 @@
         <div id="picBox">
           
         </div>
-        <br><br>
-        <form id="form">
-          <button class="btn btn-md btn-danger" id="add-username">Submit</button>
-          <br><br>
-          <input id="username" rows="2" cols="30" placeholder="Enter username here....."></input>
-        </form>
         <br><br>
         <form id="form">
           <button class="btn btn-md btn-danger" id="add-pic">Submit</button>
