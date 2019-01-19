@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Keroka77",
+=======
+    "password": "wyatt123",
+>>>>>>> master
     "database": "PicCycler",
     "host": "localhost",
     "dialect": "mysql"
