@@ -47,6 +47,12 @@ var UserAPI = {
       data: JSON.stringify(userData)
     });
   },
+  getuserName: function (nickname) {
+    return $.ajax({
+      url: "api/usernames/" + nickname,
+      type: "GET"
+    });
+  },
   getUser: function (id) {
     return $.ajax({
       url: "api/user/" + id,
@@ -98,6 +104,12 @@ addPic.on("click", function (event) {
   var picLink = $("#picLink").val().trim();
   var picTitle = $("#picTitle").val().trim();
 
+  var emptyLink = $("#picLink");
+  var emptyTitle = $("#picTitle");
+
+  emptyLink.val("");
+  emptyTitle.val("");
+
   console.log(picLink);
   console.log(picTitle);
   console.log(StaticID);
@@ -113,36 +125,27 @@ addPic.on("click", function (event) {
 });
 
 function addNickname() {
-  var isUser = false;
+  StaticName = nickname;
 
-  for(var l = 0; l < userArr.length; l++) {
-    if (nickname === userArr[l]) {
-      isUser = true;
-      StaticID = l;
-      StaticName = userArr[l];
-    }
-  }
-
-  if (isUser === true) {
-    return false;
-  } else {
-    UserAPI.saveUser({
-      username: nickname,
-    }).then(function (data) {
-      return UserAPI.getUser(data.id);
-    }).then(function (data) {
-      StaticID = data.id;
-      UserAPI.getUsers({}).then(function (response) {
-        console.log(response);
-        for (var j = 0; j < response.length; j++) {
-          userArr.push(response[j].username);
-        }
-        console.log(userArr);
+  UserAPI.getuserName(nickname).then(function(results){
+    if (results === null) {
+      UserAPI.saveUser({
+        username: nickname,
+      }).then(function (data) {
+        return UserAPI.getUser(data.id);
+      }).then(function (data) {
+        StaticID = data.id;
+        UserAPI.getUsers({}).then(function (response) {
+          for (var j = 0; j < response.length; j++) {
+            userArr.push(response[j].username);
+          }
+        });
       });
-    });
-  }
-
-
+    } else {
+      StaticID = results.id;
+      return false;
+    }
+  });
 }
 
 
@@ -178,7 +181,7 @@ addChat.on("click", function (event) {
 
 function Start() {
   setInterval(function(){
-    userArr = [];
+    var userArr = [];
     userArr.push("0 slot");
     UserAPI.getUsers({}).then(function (response) {
       for (var j = 0; j < response.length; j++) {
@@ -207,9 +210,7 @@ function Start() {
     PicAPI.getPics({}).then(function (response) {
       var picNumber = (response.length + 1) * 2;
       var Digits = JSON.stringify(Math.round(Date.now()));
-      console.log(Digits);
       var currentPic = ((Digits[6] + Digits[7] + Digits[8])%picNumber)/2;
-      console.log(Math.floor(currentPic));
       for (var k = 0; k < response.length; k++) {
         if(currentPic === 0) {
           picBox.empty();
