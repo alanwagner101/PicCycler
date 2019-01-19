@@ -35,14 +35,14 @@ h1{
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 15px!important;
   margin-left: 662px;
   margin-top: 15px;
   font-weight: bold;
 }
 
 #btnOne {
-  margin-left: 652px!important;
+  margin-left: 655px!important;
 }
 
 #wrapper {
@@ -52,18 +52,35 @@ h1{
 body {
   background-image: url("../styles/5cf2660af5f4214def7166dc7a7c8062.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 footer{
   background-color: black;
   height: 60px;
-  weight: 1440px;
-  margin-top: 350px;
+  width: 100%;
+  margin-top: 100px;
   border-top: 2px solid red;
   color: white;
   font-size: 10px;
   text-align: center;
   padding: 20px;
+  position: relative;
+  bottom: 0px;
+
+}
+/* footr*/.login{ 
+  background-color: rgb(46, 45, 45);
+  height: 60px;
+  width: 100%;
+  margin-top: 100px;
+  border-top: 2px solid red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0px;
 }
 
 /* Home page  */
@@ -73,7 +90,8 @@ footer{
 }
 
 #add-pic.btn{
-  margin-left: 0px;
+  margin-left: 10px;
+  margin-bottom: 0px;
 }
 
 #chat {
@@ -84,4 +102,36 @@ footer{
   margin-left: 0px;
   border: solid 1px darkblue;
   margin-top: 0px;
+}
+
+.container {
+  width: 100%;
+}
+#chatBox{
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#chat-area{
+  overflow: auto;
+  height: 380px;
+}
+
+#boximg img {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 378px;
+  overflow: hidden;
+  width: auto;
+}
+
+#picBox {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#picBoxCard {
+  margin-top: 10px;
+  height: 510px;
 }
