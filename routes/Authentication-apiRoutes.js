@@ -10,7 +10,7 @@ var strategy = new Auth0Strategy (
     domain: "piccycler.auth0.com",
     clientID: "0d5s2fJvok5ZDJzdtxyDSKeWDiLhbPst",
     clientSecret: "moRuQPW1YqT6JA6yxpnjDXOZG8eAxHqI6Au_pY966qy6ZdHhPb4zmEUUyEN1pj8D", 
-    callbackURL: "http://localhost:3000/callback"
+    callbackURL: "/callback"
   },
   function (accessToken, refreshToken, extraParam, profile, done) {
     return done(null, profile);
