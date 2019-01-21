@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS PicCycler;
+CREATE DATABASE PicCycler;
+
+USE PicCycler;
+
+SELECT * FROM user;
