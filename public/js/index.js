@@ -153,6 +153,10 @@ addChat.on("click", function (event) {
   event.preventDefault();
   var chat = $("#chat").val().trim();
 
+  emptyChat = $("#chat");
+
+  emptyChat.val("");
+
   ChatAPI.savechat({
     text: chat,
     UserId: StaticID
@@ -192,25 +196,25 @@ function Start() {
       chatBox.empty();
       for (var i = 0; i < data.length; i++) {
         if (data[i].UserId === StaticID) {
-          var chatWords = $("<div style='float: left; margin: 10px; color: #eeeeee; padding: 5px; background: rgb(94, 190, 94); width: 70%; text-align: left'>");
-          chatWords.html("<p style='width: 90%; margin-left: 20px'>" + StaticName + "-- " 
-          + "</p><p style='width: 90%; margin-left: 20px'>" + data[i].text + "</p>");
+          var chatWords = $("<div style='float: left; border-radius: 20px; margin: 10px; color: #eeeeee; padding: 10px; background: rgb(94, 190, 94); width: 70%; text-align: left'>");
+          chatWords.html("<p class='chatNames' style='width: 80%; margin: 0px; margin-left: 20px;'>" + StaticName + "-- " 
+          + "</p><p style='width: 80%; margin: 0px; margin-left: 20px;'>" + data[i].text + "</p>");
           chatBox.prepend(chatWords);
   
         } else {
           var textdata = data[i].text;
-          var chatWords = $("<div style='float: right; margin: 10px; color: #eeeeee; padding: 5px; background: rgb(120, 120, 245); width: 70%; text-align: left'>");
-          chatWords.html("<p style='width: 90%; margin-left: 20px'>" + userArr[data[i].UserId] 
-          + "-- " + "</p><p style='width: 90%; margin-left: 20px'>" + textdata + "</p>");
+          var chatWords = $("<div style='float: right; border-radius: 20px; margin: 10px; color: #eeeeee; padding: 10px; background: rgb(120, 120, 245); width: 70%; text-align: left'>");
+          chatWords.html("<p class='chatNames' style='width: 80%; margin: 0px; margin-left: 20px;'>" + userArr[data[i].UserId] 
+          + "-- " + "</p><p style='width: 80%; margin: 0px; margin-left: 20px;'>" + textdata + "</p>");
           chatBox.prepend(chatWords);
         } 
       }
       addNickname();
     });
     PicAPI.getPics({}).then(function (response) {
-      var picNumber = (response.length + 1) * 2;
+      var picNumber = (response.length + 1) * 1.5;
       var Digits = JSON.stringify(Math.round(Date.now()));
-      var currentPic = ((Digits[6] + Digits[7] + Digits[8])%picNumber)/2;
+      var currentPic = ((Digits[6] + Digits[7] + Digits[8])%picNumber)/1.5;
       for (var k = 0; k < response.length; k++) {
         if(currentPic === 0) {
           picBox.empty();
@@ -219,13 +223,13 @@ function Start() {
           picBox.append(beginningSlide);
         } else if (response[k].id === currentPic) {
           picBox.empty();
-          var picWords = $("<div style='text-align: center;'>");
+          var picWords = $("<div style='text-align: center; color: #ffffff'>");
           picWords.html("<h2>" + response[k].title + "</h2>");
           picBox.append(picWords);
-          var picUser = $("<div style='text-align: center;'>");
+          var picUser = $("<div style='text-align: center; color: #ffffff'>");
           picUser.html("<p>" + userArr[response[k].UserId] + "</p>");
           picBox.append(picUser);
-          var picLink = $("<div id='boximg' style=' text-align: center; max-height: 508px;'>");
+          var picLink = $("<div id='boximg' style=' text-align: center;'>");
           picLink.html("<img src='" + response[k].link + "'>");
           picBox.append(picLink);
         } else {

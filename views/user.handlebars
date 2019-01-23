@@ -1,39 +1,41 @@
-<link(rel= "stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")></link>
+<link(rel= "stylesheet" , href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" )>
+  </link>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Pic Cycler</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      {{#if loggedIn}}
-      <li class="nav-item active">
-        <a class="nav-link" id="nickname">
-        {{user.nickname}}<span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Log Out</a>
-      {{else}}
-      <li class="nav-item">
-        <a class="nav-link" href="/login">Log In</a>
-      {{/if}}
-      </li>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container">
-  <dic class="row">
-    <div class="col-md-12">
-      <h1 class="userh1">P i c   C y c l e r !</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <dic class="row">
+        <div class="col-md-12">
+          <ul class="navbar-nav">
+            <a class="navbar-brand" href="#">Pic Cycler</a>
+            {{#if loggedIn}}
+            <li class="nav-item active">
+              <a class="nav-link" id="nickname">
+                {{user.nickname}}<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log Out</a>
+              {{else}}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Log In</a>
+              {{/if}}
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </dic>
-  <div class="row">
-    <div class="col-md-4">
-        <div class="card" id="chatBox">
+  </nav>
+
+  <div class="container">
+    <dic class="row">
+      <div class="col-md-12">
+        <h1 class="userh1">P i c C y c l e r !</h1>
+      </div>
+    </dic>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark" id="chatBox">
           <div class="card-header">
             <h4>Chat</h4>
           </div>
@@ -41,31 +43,31 @@
             <div id="chat-area">
             </div>
             <br>
-            <input type="text" id="chat" placeholder="enter message here..." style = "width: 100%;">
+            <input type="text" id="chat" placeholder="enter message here..." style="width: 100%;">
             <br><br>
             <button class="btn btn-default btn-sm btn-block" id="add-chat">Send</button>
           </div>
         </div>
-    </div>
-    <div class="col-md-8">
-      <div class="card" id="picBoxCard">
-        <div class="card-body">
-          <div id="picBox">
+      </div>
+      <div class="col-md-8">
+        <div class="card bg-dark" id="picBoxCard">
+          <div class="card-body">
+            <div id="picBox">
+            </div>
           </div>
         </div>
-      </div>
-      <br>
-      <form id="form">
-          <button class="btn btn-md btn-danger" id="add-pic">Submit</button>
+        <br>
+        <form id="form">
+          <button class="btn btn-md btn-default" id="add-pic">Submit</button>
           <input id="picLink" rows="2" cols="30" placeholder="Enter Link here....."></input>
           <input id="picTitle" rows="2" cols="30" placeholder="Enter Title here....."></input>
         </form>
+      </div>
     </div>
   </div>
-</div>
 
-<footer>
-  Copyright &copy;
-</footer>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+  <footer>
+    Copyright &copy;
+  </footer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
