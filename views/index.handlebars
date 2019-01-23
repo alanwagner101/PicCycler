@@ -1,26 +1,18 @@
-<link(rel= "stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")></link>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
- <link rel="stylesheet" href="animate.min.css">
-
-
-
-{{#if loggedIn}}
+<div class="container" id="login1">
+  <div class="row">
+    <div class="col-md-12">
+      {{#if loggedIn}}
       <a href="/logout"><button class="btnOne btn-md btn-danger" id="login">Log Out</button></a>
       <li class="nav-item">
         <a class="nav-link" href="/logout">Log Out</a>
-      {{else}}
-      <h1 class="animate" class="bounceInDown">P i c   C y c l e r !</h1>
-      <p class="quote">"Take a picture, it will last longer."</p>
-      <div id="box"></div>
-      <div id="wrapper">
-      <a href="/login"><button type="button"class="btn btn-light">Log In</button></a>
-
-      <a href="/logout"><button type="button"  id="btnOne" class="btn btn-light">Log Out</button></a>
-      </div>
-      
-      {{/if}}
+        {{else}}
+        <h1 class="animate" class="bounceInDown">P i c C y c l e r !</h1>
+        <p class="quote">"Take a picture, it will last longer."</p>
+        <div id="box"></div>
+        <a href="/login"><button type="button" class="btn btn-light">Log In</button></a>
+        {{/if}}
+    </div>
+  </div>
 </div>
 
 <footer class="login">
